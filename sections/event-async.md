@@ -59,6 +59,12 @@ setTimeout(() => {
 }, 10000);
 ```
 
+结果:
+```
+hello
+over
+```
+
 以及理解如下代码的执行顺序 ([出处](https://zhuanlan.zhihu.com/p/25407758)):
 
 ```javascript
@@ -75,6 +81,14 @@ new Promise(function executor(resolve) {
   console.log(4);
 });
 console.log(5);
+```
+
+```
+2
+3
+5
+4
+1
 ```
 
 如果你不了解这些问题, 可以自己在本地尝试研究一下打印的结果. 这里希望你掌握的是 Promise 的状态转换, 包括异步与 Promise 的关系, 以及 Promise 如何帮助你处理异步, 如果你研究过 Promise 的实现那就更好了.
